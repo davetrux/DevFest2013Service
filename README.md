@@ -1,4 +1,4 @@
 DevFestDetroitService
 =====================
 
-Services used for my talk at Google DevFest Detroit 2013
+Services used for my talk at Michigan Google DevFest 2013
