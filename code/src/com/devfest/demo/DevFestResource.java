@@ -25,7 +25,7 @@ public class DevFestResource {
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
 
         return "Bazinga";
@@ -58,7 +58,25 @@ public class DevFestResource {
     @Path("name")
     @Produces(MediaType.APPLICATION_JSON)
     public Person getSingleName() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Person result = _generator.getRandomName();
 
+        return result;
+    }
+
+    @GET
+    @Path("xname")
+    @Produces(MediaType.APPLICATION_XML)
+    public Person getSingleNameXml() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Person result = _generator.getRandomName();
 
         return result;
@@ -78,6 +96,6 @@ public class DevFestResource {
     }
 
     private boolean countValid(int count) {
-        return count > 0 && count < 25;
+        return count > 0 && count < 101;
     }
 }
